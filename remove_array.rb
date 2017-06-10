@@ -9,7 +9,7 @@ end
 print_name
 
 while @students.size > 0
-  print 'Кого удалить?: '
+  print 'Who you want to kill?: '
   remove = gets.strip.to_i
   remove = remove - 1
   
@@ -26,7 +26,7 @@ while @students.size > 0
   elsif remove == 5
     @students.delete_at(5)
   else
-    puts "Вы ввели неверную команду"
+    puts "Error. You entered is wrong command"
   end
   print_name
 end
