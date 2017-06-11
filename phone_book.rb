@@ -11,16 +11,13 @@ loop do
 		@phone_book[@last_name] = @phone_number
 	end
 
-	print 'Введите фамилию или введите exit для выхода: '
+	print 'Введите фамилию или нажмите "Enter" для выхода: '
 	@last_name = gets.strip.capitalize
 	
 	if @phone_book[@last_name]
 		puts "Такая фамилия уже есть"
-	elsif @last_name == 'Exit'
-			@phone_book.each do |last_name, phone|
-				puts "#{last_name} - #{phone}"
-			end
-			exit
+	elsif @last_name == ''
+			break
 	else
 		print 'Введите номер телефона: '
 		@phone_number = gets.strip
@@ -29,3 +26,6 @@ loop do
 
 end
 
+@phone_book.each do |last_name, phone|
+	puts "#{last_name} - #{phone}"
+end
