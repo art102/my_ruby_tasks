@@ -5,17 +5,19 @@ rand_item = item[rand(0..2)]
 print '(R)ock, (S)cissors, (P)aper?: '
 s = gets.strip.capitalize
 
+# Присваиваем переменной user_choice символ в зависимости от рандома
 if s == "R"
-	user_choice = :rock
+  user_choice = :rock
 elsif s == "S"
-	user_choice = :scissors
+  user_choice = :scissors
 elsif s == "P"
-	user_choice = :paper
+  user_choice = :paper
 else
-	puts "Can't understand what you want."
-	exit
+  puts "Can't understand what you want."
+  exit
 end
 
+# Выводим на экран выбор пользователя и компьютера
 puts "User choise is #{user_choice}."
 puts "Computer choice is #{rand_item}."
 
