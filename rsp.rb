@@ -16,6 +16,7 @@ else
 	exit
 end
 
+puts "User choise is #{user_choice}."
 puts "Computer choice is #{rand_item}."
 
 if rand_item == :rock && user_choice == :scissors
