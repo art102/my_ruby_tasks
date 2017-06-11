@@ -1,4 +1,5 @@
 # encoding: UTF-8
+
 # This programm is small phonebook
 
 # create new empty hash
@@ -8,24 +9,24 @@ loop do
 	
 	#create new method for add last name & phone to hash
 	def add_person
-		@phone_book[@last_name] = @phone_number
+		@phone_book[@name] = @phone_number
 	end
 
-	print 'Введите фамилию или нажмите "Enter" для выхода: '
-	@last_name = gets.strip.capitalize
+	print 'Enter name (Press "Enter" to exit): '
+	@name = gets.strip.capitalize
 	
-	if @phone_book[@last_name]
-		puts "Такая фамилия уже есть"
-	elsif @last_name == ''
+	if @phone_book[@name]
+		puts "Already exists!"
+	elsif @name == ''
 			break
 	else
-		print 'Введите номер телефона: '
+		print 'Enter phone number: '
 		@phone_number = gets.strip
 		add_person
 	end
 
 end
 
-@phone_book.each do |last_name, phone|
-	puts "#{last_name} - #{phone}"
+@phone_book.each do |name, phone|
+	puts "Name: #{name}, Phone: #{phone}"
 end
