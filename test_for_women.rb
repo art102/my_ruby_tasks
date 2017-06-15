@@ -33,9 +33,11 @@ while answers.size != questions.size
   	print "#{i + 1}. #{item}: "
   	user_answer = gets.strip
 
-  	if user_answer == 'д' || user_answer == 'y'
-			answers << 'yes'
-  	end
+  	answers << 'yes' if user_answer == 'д' || user_answer == 'y'
+
+    #if user_answer == 'д' || user_answer == 'y'
+		#	answers << 'yes'
+  	#end
 		
   end
 
