@@ -43,8 +43,6 @@ break
 
 end
 
-p answers.size
-
 if answers.size >= 10
 	puts result[:over_10]
 elsif answers.size >= 5 and answers.size <= 9
@@ -53,6 +51,3 @@ elsif answers.size < 5
 	puts result[:less_5]
 end
 	
-	
-
-
