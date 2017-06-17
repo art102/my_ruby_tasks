@@ -9,6 +9,7 @@ temp_far = temp.map { |inst| (9.0 / 5.0 * inst.to_f + 32.0).floor }
 # используем метод map
 temp_kelvin = temp.map { |inst| (273.15 + inst).floor }
 
+# Выводим в одноу строку при помощи метода 'join'
 puts "В градусах Цельсия: "
 puts temp.join(' ')
 
