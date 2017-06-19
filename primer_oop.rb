@@ -37,3 +37,4 @@ album.add_song song2
 album.add_song song3
 
 puts album.songs[1].name
+puts album.songs[0].name
