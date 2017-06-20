@@ -13,6 +13,10 @@ class Animal
 		puts "#{@name} is sleeping..."
 	end
 
+	def jump
+		puts "#{@name} is jumping..."
+	end
+
 end
 
 #класс Dog
@@ -43,7 +47,8 @@ end
 
 dog1 = Dog.new
 dog1.run
-dog1.barking 
+dog1.barking
+dog1.jump
 
 cat1 = Cat.new
 cat1.meow
