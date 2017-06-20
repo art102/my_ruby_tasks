@@ -15,8 +15,9 @@ class Animal
 
 end
 
+#класс Dog
 class Dog < Animal
-
+	# наследуем конструктор из класса Animal
 	def initialize
 		super 'dog'
 	end
@@ -27,8 +28,9 @@ class Dog < Animal
 
 end
 
+#класс Cat
 class Cat < Animal
-
+	# наследуем конструктор из класса Animal
 	def initialize
 		super 'cat'
 	end
