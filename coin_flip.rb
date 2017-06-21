@@ -1,23 +1,23 @@
 # coding: utf-8
 
-print 'Enter tryies: '
+print 'Please enter a number of flips: '
 n = gets.strip.to_i
 
 # создаем два массива в которые будем записывать 
 # количесвто выпаданий орла и решки соответственно
-orel_times = []
-reshka_times = []
+heads = []
+tails = []
 
-# подбрасываем монетку стокльо раз,
+# подбрасываем монетку столько раз,
 # сколько ввел пользователь выше
 n.times do
 	result = rand(0..1)
 	# если выпал 0 добавляем 0 в orel_times
-	orel_times << 0 if result == 0
+	heads << 0 if result == 0
 	# если выпала 1 добавляем 1 в reshka_times
-	reshka_times << 1 if result == 1
+	tails << 1 if result == 1
 end
 
-puts "Орёл выпал: #{orel_times.size} раз."
-puts "Решка выпала: #{reshka_times.size} раз."
-
+puts "Number of Heads: #{heads.size}."
+puts "Number of Tails: #{tails.size}."
+puts "#{'H' * heads.size}#{'T' * tails.size}"
